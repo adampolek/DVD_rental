@@ -11,8 +11,8 @@
   <modules>
     <!--module>../rental_web</module-->
     <module>Rental_web</module>
-    <module>rental_jpa</module>
     <module>dvd_rental_ear-ejb</module>
     <module>dvd_rental_ear-ear</module>
+    <module>RentalDVD_jpa</module>
   </modules>
 </project>
