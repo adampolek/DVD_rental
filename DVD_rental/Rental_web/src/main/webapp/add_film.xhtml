@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>Dodawanie produktu</title>
+        <script type="text/javascript">
+            function cenavalid() {
+                if (document.getElementById("cena").value == "") {
+                    document.getElementById("errortext").innerHTML =" Podaj cenę!"; }
+                }
+</script>
+
+    </head>
+    <body>
+        <ui:composition template="add_film.xhtml">
+            <h1>Dane produktu</h1>
+                <hr/>
+                <table border="0">
+                <tr> <td>Title :</td> <td><input type="text"/></td> </tr>
+                <tr> <td>Price :</td>
+                <td>
+                    <input id="cena" type="text" onblur="javascript:cenavalid()"/>
+                    <span id="errortext"/>
+                </td>
+                </tr>
+                <tr> <td>Director :</td><td><input type="text"/></td> </tr>
+                <tr> <td>Available:</td> <td><input type="checkbox"/></td> </tr>
+            </table>
+            <input name="" type="submit" value="Create"/>
+             <hr/>
+        </ui:composition>>
+    </body>
+</html>
