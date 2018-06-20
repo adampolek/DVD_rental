@@ -1,0 +1,15 @@
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\KlientDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\model\ZamowienieDTO.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\NewSessionBean.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\jpa\JpaZamowienieDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\model\AbstractDTO.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\model\KlientDTO.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\GenericDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\jpa\GenericJpaDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\model\PurchaseItemDTO.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\FilmDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\model\FilmDTO.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\jpa\JpaFilmDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\jpa\JpaKlientDao.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\util\JpaFactory.java
+E:\Projekty\Bitbucket\DVD_rental\DVD_rental-ejb\src\main\java\file\dao\ZamowienieDao.java
