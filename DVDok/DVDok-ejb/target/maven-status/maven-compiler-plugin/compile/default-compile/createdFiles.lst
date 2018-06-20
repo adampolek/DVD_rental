@@ -1,0 +1,15 @@
+file\dao\ZamowienieDao.class
+file\dao\GenericDao.class
+file\model\PurchaseItemDTO.class
+file\dao\jpa\GenericJpaDao.class
+file\util\JpaFactory.class
+file\dao\jpa\JpaZamowienieDao.class
+file\dao\KlientDao.class
+file\dao\jpa\JpaKlientDao.class
+file\model\AbstractDTO.class
+file\dao\jpa\JpaFilmDao.class
+file\model\KlientDTO.class
+file\model\FilmDTO.class
+file\model\ZamowienieDTO.class
+file\dao\FilmDao.class
+file\NewSessionBean.class

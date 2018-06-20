@@ -18,14 +18,26 @@ import javax.persistence.TypedQuery;
  *
  * @author student
  */
-
+@DataSourceDefinition(
+        name = "java:global/dvd",
+        className = "org.apache.derby.jdbc.ClientDataSource",
+        minPoolSize = 1,
+        initialPoolSize = 1,
+        portNumber = 1527,
+        serverName = "localhost",
+        user = "app",
+        password = "app",
+        databaseName = "dvd",
+        properties = {"connectionAttributes=;create=true"}
+)
 @Stateless
 public class JpaFilmDao extends GenericJpaDao<FilmDTO, Long> implements FilmDao {
     @PersistenceContext(unitName = "file_DVD_rental-ejb_1.0PU")
+    private EntityManager em;// = getEntityManager();
 
     @Override
     public List<FilmDTO> findAll() {
-        EntityManager em = getEntityManager();
+        em = getEntityManager();
         TypedQuery<FilmDTO> q = em.createNamedQuery("FilmDTO.findAll", FilmDTO.class);
         return q.getResultList();
     }

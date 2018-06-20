@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <style>
+        .newtable {
+            border-collapse: collapse;
+        }
+
+        .newtable td, th {
+            width: 200px;
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .newtable tr:nth-child(even){background-color: #f2f2f2;}
+
+        .newtable tr:hover {background-color: #ddd;}
+
+        .newtable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <h:head>
+        <title>Panel Administratora</title>
+    </h:head>
+    <h:body>
+        <h1>Witaj Adminie!</h1> <hr/>
+        <h:form id="filmForm">
+            <p:growl id="growl" showDetail="true"  />
+            <p:dataTable id="filmTable" value="#{film.films}" var="f" >
+                <p:column headerText="Nazwa" >
+                    #{f.title}
+                </p:column>
+                <p:column headerText="Kategoria">
+                    #{f.director}
+                </p:column>
+                <p:column headerText="Cena">
+                    <h:outputText value="#{f.price}" >
+                        <f:convertNumber locale="pl-PL" type="currency" currencySymbol="zł"  />
+                    </h:outputText>
+                </p:column>
+            </p:dataTable>
+            <p:commandButton value="ADD" action="#{film.onFilmAdd()}" oncomplete="PF('filmDlg').show()" update=":filmDlgId"/>
+        </h:form>
+        <p:dialog id="filmDlgId" widgetVar="filmDlg" dynamic="true" modal="true" >
+            <h:form>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Title" for="tytulId"/>
+                    <p:inputText id="tytulId" value="#{film.dvd.title}" required="true" />
+                    <p:outputLabel value="Director" for="rezyserId"/>
+                    <p:inputText id="rezyserId" value="#{film.dvd.director}" required="true" />
+                    <p:outputLabel value="Price" for="cenaId" />
+                    <p:inputText id="cenaId" value="#{film.dvd.price}"  required="true" >
+                        <f:convertNumber locale="pl-PL" maxFractionDigits="2"  />
+                    </p:inputText>
+                </p:panelGrid>
+                <p:commandButton  value="Anuluj" type="button" onclick="PF('filmDlg').hide()"  />
+                <p:commandButton value="Zatwierdź" action="#{film.added()}"  update=":filmForm:filmTable :filmForm:growl" />
+            </h:form>
+        </p:dialog>
+    </h:body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

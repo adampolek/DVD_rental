@@ -26,8 +26,24 @@ import org.primefaces.context.RequestContext;
 public class AddFilm {
 
     @EJB
-    private FilmDao dao = new JpaFilmDao();
+    private FilmDao dao;
     private FilmDTO dvd = new FilmDTO();
+
+    public FilmDao getDao() {
+        return dao;
+    }
+
+    public void setDao(FilmDao dao) {
+        this.dao = dao;
+    }
+
+    public FilmDTO getDvd() {
+        return dvd;
+    }
+
+    public void setDvd(FilmDTO dvd) {
+        this.dvd = dvd;
+    }
 
     public List<FilmDTO> getFilms() {
         return dao.findAll();
@@ -36,13 +52,19 @@ public class AddFilm {
     public FilmDTO getFilm() {
         return dvd;
     }
-    
-    public void setFilm(FilmDTO dvd) {
-         this.dvd = dvd;
-     }
 
-    public String addfilm() {
+    public void setFilm(FilmDTO dvd) {
+        this.dvd = dvd;
+    }
+
+    public void onFilmAdd() {
+        dvd = new FilmDTO();
+        
+    }
+
+    public String added() {
         dao.save(dvd);
+        RequestContext.getCurrentInstance().execute("PF('filmDlg').hide()");
         return "admin.xhtml";
     }
 
